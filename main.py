@@ -3,7 +3,9 @@ def main():
     text = get_book_text(book_path)
     num_words = get_num_words(text)
     print(f"{num_words} words found in the document")
-    get_num_chars(text)
+
+    char_count = get_num_chars(text)
+    print(char_count)
 
 
 def get_num_chars(text):
@@ -14,7 +16,7 @@ def get_num_chars(text):
             char_count[char] += 1
         else:
             char_count[char] = 1
-    print(char_count)
+    return char_count
 
 def get_num_words(text):
     words = text.split()
